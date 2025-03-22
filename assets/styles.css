@@ -9,6 +9,21 @@
   --yellow: #ffcc00;
   --white: #fff;
 }
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile view: Center logo */
+@media screen and (max-width: 768px) {
+  .logo {
+    justify-content: center; /* Centers the logo */
+    width: 100%; /* Ensures it takes full width */
+    text-align: center;
+  }
+}
+
 
 /* ======== Base ========== */
 
