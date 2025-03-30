@@ -12,8 +12,7 @@
 .nav_logo {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 150px;
+  margin-right: 20px;
   
 }
 
@@ -52,6 +51,8 @@ body {
   line-height: 1.6;
   color: var(--dark-color);
   background-color: var(--white);
+  width: 100%;
+
 }
 
 li,
@@ -71,10 +72,9 @@ img {
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Adds shadow */
 }
 
-img {
-  max-width: 100%;
-  max-height: 100%;
-}
+/* Remove the redundant img rule */
+
+
 
 h2,
 h3,
@@ -88,6 +88,7 @@ h4 {
   margin: 0 auto;
   justify-content: space-between;
   
+  
 }
 
 @media only screen and (max-width: 992px) {
@@ -98,15 +99,17 @@ h4 {
 
 /* =========== Header ============ */
 
+
 .header {
   min-height: 100vh;
   background: linear-gradient(to top,
+    
       rgb(17, 117, 231, 0.5),
       rgba(136, 0, 133, 0.6)),
     url("./images/Banner1.jpg") center/cover no-repeat fixed;
   position: relative;
   z-index: 100;
-  width: 100%;
+ 
 }
 
 .header::after {
@@ -124,37 +127,38 @@ h4 {
 
 .navigation {
   position: relative;
-  padding: 1.5rem 0;
   z-index: 100;
   width: 100%;
-  margin-bottom:auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  
   
 }
 
 .navbar-logo{
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   object-fit: cover;
-  display: block;
- margin-left: 30px;
+  display: flex;
  justify-content: center;
  align-items: center;
- justify-content: space-between;
- margin-top: 10px;
- max-width: 150px;
+ margin: 55px;
+ text-align: center;
+ 
 
 }
 .nav-items {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  
+  
+  
 }
-nav {
-  display: flex;
-  justify-content: space-between; /* Logo on the left, items on the right */
-  align-items: center; /* Align everything vertically */
-  padding: 10px 20px; /* Adjust as needed */
-}
+
 
 
 
@@ -171,18 +175,12 @@ ul {
   display: none;
 }
 
-.nav__center {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  align-items: center;
-  margin-top: 10px;
-}
 
 .nav__header .nav__logo h1 {
   font-size: 3rem;
   font-weight: 700;
   color: var(--white);
-  width: 230px;
+  width: auto;
 
 }
 
@@ -203,6 +201,7 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   
   
   
@@ -212,7 +211,7 @@ ul {
 .nav__menu .nav__list {
   display: flex;
   justify-content: space-between;
-  margin-left: 100px;
+ 
   
   
 }
@@ -221,7 +220,7 @@ ul {
 
 .nav__item .nav__link:link,
 .nav__item .nav__link:visited {
-  display: inline-block;
+  display: flex;
   padding: 1rem;
   color: var(--grey-color);
   text-transform: uppercase;
@@ -233,11 +232,12 @@ ul {
   height: 50px;
   font-size: 20px;
   font-weight: bold;
-  width: 100%;
+  margin-left: 100px;
   text-align: center;
-  justify-content: space-between;
-  padding-right: 50px;
-  margin-bottom: 100px;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+ 
   
 
 }
@@ -263,6 +263,7 @@ ul {
   border-radius: 10rem;
   border: 1px solid var(--default-color);
   transition: all 300ms ease-in-out;
+  width: 100%;
 }
 
 .nav__menu .nav__item:last-child .nav__link:hover {
@@ -349,6 +350,8 @@ ul {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    text-align: center;
+    
   }
 
 
@@ -356,9 +359,7 @@ ul {
 
 
 
-.nav-menu li {
-  margin-left: 20px; /* Spacing between nav items */
-}
+
 
 /* Mobile Styles */
 @media (max-width: 768px) { /* Adjust breakpoint as needed */
@@ -667,263 +668,7 @@ ul {
   }
 }
 
-/* =========== Cart Slide =========== */
 
-.cart__slide {
-  padding-bottom: 30rem;
-}
-
-.cart__like {
-  display: grid;
-  grid-template-columns: 2fr 1.5fr;
-  padding: 1.6rem 1rem;
-}
-
-.image__holder {
-  width: 100%;
-  text-align: center;
-}
-
-.image__holder img {
-  width: 45rem;
-  height: 50rem;
-}
-
-.cart__details h1 {
-  font-size: 5rem;
-  line-height: 1.2;
-  font-weight: 500;
-  margin-bottom: 1.6rem;
-}
-
-.cart__details p {
-  font-size: 1.8rem;
-  color: var(--grey-color-alt);
-  margin-bottom: 1.6rem;
-}
-
-.cart__details .colors {
-  display: flex;
-  margin: 0.8rem 0 2rem 0;
-}
-
-.cart__details .colors span {
-  height: 1.8rem;
-  width: 1.8rem;
-  border-radius: 50%;
-  border: 2px solid var(--dark-color-alt);
-  cursor: pointer;
-}
-
-.cart__details .colors span:not(:last-child) {
-  margin-right: 0.7rem;
-}
-
-.cart__details .colors span:nth-child(1) {
-  background-color: red;
-}
-
-.cart__details .colors span:nth-child(2) {
-  background-color: green;
-}
-
-.cart__details .colors span:nth-child(3) {
-  background-color: blue;
-}
-
-.cart__details .colors span:nth-child(4) {
-  background-color: yellow;
-}
-
-.cart__details .btn__group button {
-  display: inline-block;
-  width: 15rem;
-  padding: 1.3rem;
-  border: 1px solid var(--grey-color-alt);
-  border-radius: 0.3rem;
-  color: var(--dark-color-altr);
-  font-weight: 600;
-  font-size: 1.7rem;
-  background-color: transparent;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-
-.cart__details .btn__group button:focus {
-  outline: none;
-}
-
-.cart__details .btn__group button:first-child:hover {
-  border-color: var(--default-color);
-  background-color: var(--default-color);
-  color: var(--grey-color);
-}
-
-.cart__details .btn__group button:last-child {
-  border-color: var(--default-color);
-  background-color: var(--default-color);
-  color: var(--grey-color);
-}
-
-.glide__bullets {
-  bottom: -30%;
-}
-
-.glide__bullet {
-  width: 25rem;
-  height: 15rem;
-  border-radius: 0;
-  border: 1px solid var(--grey-color-alt);
-  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.05);
-}
-
-.glide__bullet:hover {
-  border: 1px solid var(--grey-color-alt);
-  background-color: transparent;
-}
-
-.glide__bullet:focus {
-  border: 1px solid var(--grey-color-alt);
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-.thumbnail {
-  width: 25rem;
-  height: 13rem;
-}
-
-.thumbnail img {
-  object-fit: contain;
-}
-
-.glide__arrow {
-  background-color: transparent;
-  color: var(--grey-color-alt);
-  text-shadow: 0 0 0 rgba(0, 0, 0, 0);
-  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-  box-shadow: 0;
-  padding: 1.3rem 3rem;
-  border: 1px solid var(--grey-color-alt);
-  opacity: 0;
-  top: -2rem;
-  visibility: hidden;
-  transition: all 0.3s ease-in-out;
-}
-
-.cart__slide:hover .glide__arrow {
-  visibility: visible;
-  opacity: 1;
-}
-
-.glide__arrow:hover {
-  border: 1px solid var(--grey-color-alt);
-}
-
-@media only screen and (max-width: 1200px) {
-  .glide__bullet {
-    width: 15rem;
-    height: 15rem;
-  }
-
-  .thumbnail {
-    width: 15rem;
-    height: 15rem;
-  }
-
-  .thumbnail img {
-    height: 12rem;
-  }
-}
-
-@media only screen and (max-width: 996px) {
-  .cart__slide {
-    padding-bottom: 20rem;
-  }
-
-  .cart__like {
-    display: grid;
-    grid-template-columns: 2fr 1.5fr;
-    gap: 0 1rem;
-    padding: 1.6rem 1rem;
-  }
-
-  .image__holder img {
-    width: 40rem;
-    height: 45rem;
-  }
-
-  .cart__details .btn__group button {
-    font-size: 1.4rem;
-    width: 12rem;
-  }
-
-  .glide__bullet {
-    width: 15rem;
-    height: 15rem;
-  }
-
-  .thumbnail {
-    width: 15rem;
-    height: 15rem;
-  }
-
-  .thumbnail img {
-    height: 12rem;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .cart__like {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0 1rem;
-    padding: 1.6rem 1rem;
-  }
-
-  .image__holder img {
-    width: 30rem;
-    height: 35rem;
-  }
-
-  .cart__details h1 {
-    font-size: 4rem;
-  }
-
-  .cart__details .btn__group button:not(:last-child) {
-    margin-bottom: 1rem;
-  }
-
-  .glide__bullet {
-    width: 10rem;
-    height: 10rem;
-  }
-
-  .thumbnail {
-    width: 10rem;
-    height: 10rem;
-  }
-
-  .thumbnail img {
-    height: 8rem;
-  }
-}
-
-@media only screen and (max-width: 567px) {
-  .cart__slide {
-    padding-bottom: 3rem;
-  }
-
-  .glide__bullet {
-    display: none;
-  }
-
-  .cart__like {
-    grid-template-columns: 1fr;
-    gap: 2rem 0rem;
-    padding: 1.6rem 1rem;
-  }
-}
 
 /* =========== Special Offer ============ */
 .special__offer {
